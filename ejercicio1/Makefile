@@ -10,7 +10,7 @@ OBJS := ejercicios.o
 main: main.c $(OBJS)
 	$(CC) $(CFLAGS) $^ -o $@
 	
-ejercicios.o: strCmp.asm
+ejercicios.o: countChars.asm
 	$(NASM) $(NASMFLAGS) $< -o $@
 
 clean:
