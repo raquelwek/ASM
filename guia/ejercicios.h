@@ -5,6 +5,6 @@
 
 //unint32_t strLen(char* a);
 //unint32_t strCmp(char* a, char* b);
-int countChars(char* s, char c);
-
+//int countChars(char* s, char c);
+void intercambiar(char*);
 #endif
