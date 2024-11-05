@@ -1,11 +1,12 @@
 
 section .TEXTO
+global intercambiar
 extern strlen
 
-global intercambiar
+
 
 ;Dado un string, devuelve un string in-place con los caracteres en orden inverso.
-;void intercambiar(char* str);
+;void intercambiar(char cadena[]);
 ;   i = 0
 ;   j = strlen(str) - 1
 ;   while i < j:
@@ -19,8 +20,9 @@ intercambiar:
 
     push r12
     push r13
-    mov r12, rdi    ; almaceno puntero al primer char
 
+    mov r12, rdi    ; almaceno puntero al primer char
+    
     call strlen      ; guarda len en rax
     mov r13, rax     ; j = strlen(str)
 
@@ -45,18 +47,3 @@ intercambiar:
     pop rbp
     ret
 
-
-strLen:
-    push rbp
-    mov rbp, rsp
-    mov rax, 0 ;contador
-    .while:
-        mov dl, [rdi+rax]
-        inc rax
-        cmp dl, 0
-        jne .while
-    
-    dec rax
-    .fin:
-        pop rbp
-        ret
