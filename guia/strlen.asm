@@ -1,7 +1,7 @@
 section .data
 TEXTO: db "Longitud en ASM: %d", 10,0
 
-section .TEXTO
+section .text
 
 global strLen
 strLen:

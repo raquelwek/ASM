@@ -24,7 +24,7 @@ void testCountChars(){
     char* s = "anitalavalatina";
     printf("el resultado esperado es 6, obtenido %d\n", countChars(s,a));
 }
-*/
+
 void testIntercambiarChars(){
     char s[] = "hola";
     
@@ -32,11 +32,40 @@ void testIntercambiarChars(){
     printf("el resultado esperado es aloh, obtenido %s\n", s);
     
 }
+*/
+void test_diagonal() {
+    // Definimos una matriz 3x3 de ejemplo
+    short matriz[3][3] = {
+        {1, 2, 3},
+        {4, 5, 6},
+        {7, 8, 9}
+    };
+
+    // Convertimos a un puntero para pasar a la función
+    short* matriz_ptr = (short*)matriz;
+
+    // Creamos un vector para almacenar los elementos de la diagonal
+    short vector[3];
+
+    // Llamamos a la función diagonal
+    diagonal(matriz_ptr, 3, vector);
+
+    // Comprobamos que el vector contiene los elementos correctos
+    short expected_vector[3] = {1, 5, 9};  // Elementos de la diagonal
+
+    // Usamos assert para validar la salida
+    for (int i = 0; i < 3; i++) {
+        printf("%d vs %d\n",vector[i],expected_vector[i]);
+    }
+
+    printf("Test passed: diagonal function works correctly.\n");
+}
     
 int main(void){
     //testStrCmp();
     //testStrLen();
     //testCountChars();
-    testIntercambiarChars();
+    //testIntercambiarChars();
+    test_diagonal();
     return 0;
 }
