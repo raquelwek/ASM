@@ -26,7 +26,7 @@ void testCountChars(){
 }
 */
 void testIntercambiarChars(){
-    char* s = "hola";
+    char s[] = "hola";
     
     intercambiar(s);
     printf("el resultado esperado es aloh, obtenido %s\n", s);

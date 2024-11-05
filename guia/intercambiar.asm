@@ -1,5 +1,5 @@
 
-section .TEXTO
+section .text
 global intercambiar
 extern strlen
 
